@@ -1,0 +1,4 @@
+# Python Brasil Exercises
+
+This is a list of programming exercises found on the website https://python.org.br
+They deal with practical exercises and data analysis. They are also generic and can be made in pseudo-code or any other language.
