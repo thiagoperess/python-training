@@ -1,5 +1,6 @@
-# Faça um Programa que peça a temperatura em graus Celsius,
-# e transforme e mostre em graus Fahrenheit:
+# Exercício 10
+
+# Faça um Programa que peça a temperatura em graus Celsius, e transforme e mostre em graus Fahrenheit:
 
 celsius = int(input('Digite a temperatura em Celsius (Cº): '))
 fahrenheit = (celsius * 9 / 5) + 32

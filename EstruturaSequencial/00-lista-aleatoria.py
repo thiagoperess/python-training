@@ -1,6 +1,7 @@
-# Faça um programa que peça ao usuário que ele digite oito valores.
-# Ao final, o programa deverá exibir os números digitados na ordem e,
-# em seguida, uma lista com os números embaralhados.
+# Exercício 00
+
+# Faça um programa que peça ao usuário que ele digite oito valores. Ao final, o programa deverá 
+# exibir os números digitados na ordem e, em seguida, uma lista com os números embaralhados.
 
 from time import sleep
 from random import shuffle
