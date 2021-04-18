@@ -17,21 +17,13 @@
 salario = int(input('Salário: '))
 
 if salario <= 280:
-    aumento20 = salario * 20 / 100
-    print(f'Com salário de R$ {salario:.2f}.')
-    print('Aumentando em 20%.')
-    print(f'Sendo o aumento de R$ {aumento20:.2f}.')
-    print(f'Seu salário fica em R$ {salario + aumento20:.2f}.')
+    aumento = salario * 20 / 100
+    percentual = '20%'
 elif 280 < salario <= 700:
-    aumento15 = salario * 15 / 100
-    print(f'Com salário de R$ {salario:.2f}.')
-    print('Aumentando em 15%.')
-    print(f'Sendo o aumento de R$ {aumento15:.2f}.')
-    print(f'Seu salário fica em R$ {salario + aumento15:.2f}.')
+    aumento = salario * 15 / 100
+    percentual = '15%'
 elif salario > 700:
-    aumento10 = salario * 10 / 100
-    print(f'Com salário de R$ {salario:.2f}.')
-    print('Aumentando em 10%.')
-    print(f'Sendo o aumento de R$ {aumento10:.2f}.')
-    print(f'Seu salário fica em R$ {salario + aumento10:.2f}.')
-
+    aumento = salario * 10 / 100
+    percentual = '10%'
+    
+print(f'Com salário de R$ {salario:.2f}.\nAumentando em {percentual}.\nSendo o aumento de R$ {aumento:.2f}.\nSeu salário fica em R$ {salario + aumento:.2f}.')
