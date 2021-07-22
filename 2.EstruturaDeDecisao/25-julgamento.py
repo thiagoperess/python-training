@@ -14,50 +14,28 @@
 
 # Solução
 
-count = 0
+qty_plus = 0
 
-resp = str(input(
-    'Telefonou para a vítima? [S/N] ')
-    ).upper()
-if resp == 'S':
-    count += 1
+status = {  2 : 'Suspeito(a)',
+            3 : 'Cúmplice',
+            4 : 'Cúmplice',
+            5 : 'Assassino(a)'}
 
-resp = str(input(
-    'Esteve no local do crime? [S/N] ')
-    ).upper()
-if resp == 'S':
-    count += 1
+ls_quest = [  'Telefonou para a vítima?',
+                    'Esteve no local do crime?',
+                    'Mora perto da vítima?',
+                    'Devia para a vítima?',
+                    'Já trabalhou com a vítima?']
 
-resp = str(input(
-    'Mora perto da vítima? [S/N] ')
-    ).upper()
-if resp == 'S':
-    count += 1
+for i in range(len(ls_quest)):
+    print(ls_quest[i] + ' [S/N]: ')
 
-resp = str(input(
-    'Devia para a vítima? [S/N] ')
-    ).upper()
-if resp == 'S':
-    count += 1
+    answer = input('Resp.: ').strip()
 
-resp = str(input(
-    'Já trabalhou com a vítima? [S/N] ')
-    ).upper()
-if resp == 'S':
-    count += 1
-    
-if count == 2:
-    print(f'{count} Afirmações Positivas. \
-                    \nQualificação: Suspeito(a)')
+    if answer.lower() == 's':
+        qty_plus += 1
 
-elif count == 3 or count == 4:
-    print(f'{count} Afirmações Positivas. \
-                    \nQualificação: Cúmplice')
-
-elif count == 5:
-    print(f'{count} Afirmações Positivas. \
-                    \nQualificação: Assassino(a)')
-
-elif count == 0 or count < 2:
-    print(f'{count} Afirmações Positivas. \
-                    \nQualificação: Inocente')
+if qty_plus in status:
+    print(f'{qty_plus} Afirmações. ' + status[qty_plus])
+else:
+    print(f'{qty_plus} Afirmações. Inocente')
