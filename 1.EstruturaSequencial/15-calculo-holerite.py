@@ -9,17 +9,21 @@
 # c) quanto pagou ao sindicato.
 # d) o salário líquido.
 
-hourlyPayment = float(input('Quanto você recebe por hora? '))
-hourWorked = int(input('Quantas horas você trabalhou este mês? '))
-salary = hourWorked * hourlyPayment
-incomeTax = salary * 0.05
-inss = salary * 0.08
-unionFee = salary * 0.11
-discount = incomeTax + inss + unionFee
-netSalary = salary - discount
-print(f'Seu salário bruto referente a {hourWorked} horas trabalhadas foi de R${salary:.0f}.')
-print(f'R$ {inss:.2f} foram descontados de INSS, referente a 8% do bruto.')
-print(f'Foram pagos R$ {incomeTax:.2f} referentes a 5% de taxa ao sindicato.')
-print(f'Foram descontados mais R$ {unionFee:.2f} de Imposto de Renda, sendo 11% do bruto.')
-print(f'Com os descontos totais de {discount:.2f}, '
-      f'seus rendimento líquidos são de R$ {netSalary:.2f}.')
+pay_hr = float(input('Valor por hora: '))
+work_hr = int(input('Horas trabalhadas: '))
+
+slry = work_hr * pay_hr
+tax = slry * 0.05
+inss = slry * 0.08
+ir = slry * 0.11
+disc = tax + inss + ir
+net_cash = slry - disc
+
+print(
+      f'''Seu salário bruto por {work_hr} horas: R$ {slry:.0f}.
+      R$ {inss:.2f} de INSS, referente a 8% do bruto.
+      5% de Taxa do Sindicato: pago R$ {tax:.2f}.
+      R$ {ir:.2f} de Imposto de Renda, sendo 11% do bruto.
+      Descontos totais: R$ {disc:.2f}. 
+      Rendimento líquido: R$ {net_cash:.2f}.
+''')
