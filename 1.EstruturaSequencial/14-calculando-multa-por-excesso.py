@@ -8,10 +8,14 @@
 # Gravar na variável excesso a quantidade de quilos além do limite e na variável multa o valor da multa que João deverá pagar.
 # Imprima os dados do programa com as mensagens adequadas.
 
-weightFish = float(input('Quantos kilos de peixe você pescou? '))
-if weightFish > 50:
-    weightFish -= 50
-    excess = weightFish
-    excess *= 4.0
-    print(f'Você pescou {weightFish + 50:.2f}kg e passou {weightFish:.0f}kg da cota permitida.')
-    print(f'Você deve pagar R${excess:.2f} de multa pelos {excess / 4:.0f}kg excendentes.')
+wt_fish = float(input('Kg pescados: '))
+
+if wt_fish > 50:
+    wt_fish -= 50
+    xs = wt_fish
+    xs *= 4.0
+
+    print(f'{wt_fish + 50:.2f}kg passam {wt_fish:.0f}kg da cota.\
+          R${xs:.2f} de multa pelos {xs / 4:.0f}kg excendentes.')
+else:
+    print(f'{wt_fish} não passam da cota. Cobrança sem multa!')
