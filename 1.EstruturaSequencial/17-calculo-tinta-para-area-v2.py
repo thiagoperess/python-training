@@ -11,30 +11,31 @@
 # Misturar latas e galões, de forma que o desperdício de tinta seja menor. Acrescente 10% de folga 
 # e sempre arredonde os valores para cima, isto é, considere latas cheias.
 
-tamanho = float(input('Entre com o tamanho da área: '))
+size = float(input('m² a serem pintados: '))
 
-litros = tamanho / 6
-latas = litros / 18
+liters = (size / 6.0) * 1.1  # 10% de folga
+cans = int(liters / 18.0)
+gallons = int(liters / 3.6)
 
-if latas % 18 != 0:
-    latas += 1
-preco = latas * 80
+# Cáculo de latas
+if (liters % 18 != 0):
+    cans += 1
 
-galoes = litros / 3.6
-if galoes % 3.6 != 0:
-    galoes += 1
-preco2 = galoes * 25
+# Cálculo de galões
+if (liters % 3.6 != 0):
+    gallons += 1
 
-# mistura de latas e galoes
-mistura_lata = int(litros / 18.0)
-mistura_galao = int((litros - (mistura_lata * 18)) / 3.6)
+# Cálculo mistura latas e galões
+mixCans = int(liters / 18.0)
+mixGalloons = int((liters - (mixCans * 18.0)) / 3.6)
+if ((liters - (mixCans * 18.0) % 3.6 != 0)):
+    mixGalloons += 1
 
-if litros - (mistura_lata * 18) % 3.6 != 0:
-    mistura_galao += 1
+print(
+    f'''Latas: {cans}. Valor: R$ {cans * 80:.2f}
+    Galões: {gallons}. Valor: R$ {gallons * 25:.2f}
+    Mistura: {mixCans} latas e {mixGalloons} galões. \
+    Valor: R$ {(mixCans * 80 + mixGalloons * 25):.2f}
+    ''')
 
-print(f'''Apenas latas de 18 litros: {latas:.0f}, preço: {preco:.2f}
-          Apenas galões de 3.6 litros: {galoes:.0f}, preço: {preco2:.2f}''')
-
-print(f'''Mistura: {mistura_lata} latas e {mistura_galao}
-          Galões = {((mistura_lata * 80) + (mistura_galao * 25))}''')
-
+    
