@@ -10,5 +10,8 @@ for i in range(len_list1):
     nums = int(input(f'Digite o {i+1}º número: '))
     list1.append(nums)
 
-print(f'O maior número é {max(list1)}' )
-print(f'O menor número é {min(list1)}')
+print(f'''
+       O maior número é {max(list1)}
+       O menor número é {min(list1)}
+       E sua soma total é {sum(list1)}
+       ''')
