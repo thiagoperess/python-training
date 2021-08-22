@@ -5,15 +5,16 @@
 list1 = []
 len_list1 = int(input('Tamanho da lista: '))
 
-count = 0
-while len_list1 != count:
-    nums = int(input(f'Digite o {count+1}º número: '))
+for i in range(len_list1):
+    nums = int(input(f'Digite o {i+1}º número: '))
 
-    while nums > 1000 or nums < 0:
-        nums = int(input(f'ERRO!! Digite o {count+1}º número: '))
-        
-    list1.append(nums)
-    count += 1
+    while nums < 0 or nums > 1000:
+        nums = int(input(f'ERRO!! Digite o {i+1}º número: '))
+    else:
+        list1.append(nums)
 
-print(f'O maior número é {max(list1)}')
-print(f'O menor número é {min(list1)}')
+print(f'''
+       O maior número é {max(list1)}
+       O menor número é {min(list1)}
+       E sua soma total é {sum(list1)}
+       ''')
