@@ -15,12 +15,12 @@
 # Imprima na tela as informações, dispostas conforme o exemplo abaixo.
 # No exemplo o valor da hora é 5 e a quantidade de hora é 220.
 
-# Salário Bruto: (5 * 220): R$ 1100, 00
-# (-) IR(5 %): R$   55, 00
-# (-) INSS(10 %): R$  110, 00
-# FGTS(11 %): R$  121, 00
-# Total de descontos: R$  165, 00
-# Salário Liquido: R$  935, 00
+# Salário Bruto: (5 * 220): R$ 1100,00
+# (-) IR(5 %): R$   55,00
+# (-) INSS(10 %): R$  110,00
+# FGTS(11 %): R$  121,00
+# Total de descontos: R$  165,00
+# Salário Liquido: R$  935,00
 
 valor_hora = float(input('Valor hora: '))
 qtde_horas = int(input('Quantidade de horas: '))
