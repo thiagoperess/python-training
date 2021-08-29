@@ -1,9 +1,12 @@
-# Exercício 09
+# Exercício 27
 
-# Faça um Programa que leia três números e mostre-os em ordem decrescente. 
+# Faça um Programa que leia N números e mostre-os em ordem decrescente. 
 
-list1 = list()
-for i in range(0, 3):
-    num = int(input('Digite um número: '))
-    list1.append(num)
-print(sorted(list1, reverse=True))
+lista = []
+qty_num = int(input('Quantos números? '))
+
+for i in range(qty_num):
+    num = int(input(f'Digite o {i+1}º número: '))
+    lista.append(num)
+
+print(sorted(lista, reverse=True))
