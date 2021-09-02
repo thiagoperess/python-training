@@ -1,4 +1,4 @@
-# Exercício
+# Exercício 31
 
 # Faça um programa que leia um número e exiba o dia correspondente da semana:
 # (1-Domingo, 2- Segunda, etc.). Outro valor deve aparecer valor inválido.
