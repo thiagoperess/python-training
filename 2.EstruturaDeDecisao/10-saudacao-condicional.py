@@ -5,15 +5,12 @@
 # Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" 
 # ou "Valor Inválido!", conforme o caso. 
 
-turno = str(input('Em que turno você estuda? ')
-).upper()
+turno = str(input('Turno de estudo? ')).upper()
 
 while turno not in 'MVN':
+    turno = str(input('Opção Inválida: ')).upper()
 
-    turno = str(input('Opção Inválida: ')
-    ).upper()
-
-if turno in 'Mm': print('Bom Dia')
-elif turno in 'Vv': print('Boa Tarde')
+if turno in 'M': print('Bom Dia')
+elif turno in 'V': print('Boa Tarde')
 elif turno in 'N': print('Boa noite')
     
