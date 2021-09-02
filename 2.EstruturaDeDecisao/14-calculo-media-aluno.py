@@ -1,6 +1,6 @@
 # Exercício 14
 
-# Faça um programa que lê as N notas parciais obtidas por um aluno numa disciplina ao longo de um semestre,
+# Faça um programa que lê as N notas parciais obtidas por um aluno numa disciplina,
 # e calcule a sua média. A atribuição de conceitos obedece à tabela abaixo:
 
 # Média de Aproveitamento  Conceito
@@ -27,8 +27,7 @@ for i in range(qty_notas):
 
 media = sum(lista) / len(lista)
 
-print(f'Notas: {lista}\
-        Média {media:.1f}')
+print(f'Notas: {lista} Média {media:.1f}')
 
 if 9 <= media <= 10: print('Conceito A.')
 elif 7.5 <= media < 9: print('Conceito B.')
