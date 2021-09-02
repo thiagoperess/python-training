@@ -8,41 +8,42 @@
 # inteiro ou decimal.
 
 print('Digite dois números')
-num1 = float(input('Número 1: '))
-num2 = float(input('Número 2: '))
+n1 = float(input('Número 1: '))
+n2 = float(input('Número 2: '))
 
-option = int(input('''Qual operação deseja realizar?
+opt = int(input('''Qual operação deseja realizar?
 
 1) Soma;
 2) Subtração;
 3) Multiplicação;
 4) Divisão.
 
-'''))
+>>> '''))
 
-if option == 1:
-    number = num1 + num2
-elif option == 2:
-    number = num1 - num2
-elif option == 3:
-    number = num1 * num2
-elif option == 4:
-    number = num1 / num2
-else:
-    print('Opção Inválida.')
-    exit()
+def add(x, y): return x + y
+def subt(x, y): return x - y
+def mult(x, y): return x * y
+def div(x, y): return x / y
 
-if number >= 0:
-    print(f'O número {number} é positivo.')
-else:
-    print(f'O número {number} é negativo.')
+while True:
+    if opt == 1:
+        num = add(n1, n2)
 
-if number == round(number):
-    print(f'O número {number:.0f} é inteiro!')
-else:
-    print(f'O número {number} é decimal!')
+    elif opt == 2:
+        num = subt(n1, n2)
 
-if number % 2 == 0:
-    print(f'O número {number} é par')
-else:
-    print(f'O número {number} é ímpar.')
+    elif opt == 3:
+        num = mult(n1, n2)
+
+    elif opt == 4:
+        num = div(n1, n2)
+
+    else:
+        print('\nOpção Inválida!')
+        break
+
+    print(f'Total: {num:.1f}')
+    print('É positivo' if num >= 0 else 'É negativo')
+    print('É inteiro' if num == round(num) else 'É decimal')
+    print('É par' if num % 2 == 0 else 'É ímpar')
+    break
