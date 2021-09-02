@@ -58,10 +58,10 @@ if tabajara_card == 's':
     discount = total * 0.05 
     total = total - discount
 
-print('-' * 30)
+print('-' * 32)
 
 print(f'''MERCADO TABAJARA - CUPOM FISCAL
--------------------------
+--------------------------------
 Carne: {beef};
 Peso: {qty_beef} Kg;
 Total sem desconto R$ {total + discount:.2f};
@@ -69,6 +69,6 @@ Usou o Cartão Tabajara? {tabajara_card};
 Desconto de R$ {discount:.2f};
 Total com desconto R$ {total:.2f}.''')
 
-print('-' * 30)
+print('-' * 32)
 print('Obrigado e volte sempre!')
-print('-' * 30)
+print('-' * 32)
