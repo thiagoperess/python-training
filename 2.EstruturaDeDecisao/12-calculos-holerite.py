@@ -2,7 +2,7 @@
 
 # Faça um programa para o cálculo de uma folha de pagamento, sabendo que os descontos
 # são do Imposto de Renda, que depende do salário bruto (conforme tabela abaixo) e 3%
-# para o Sindicato e que o FGTS corresponde a 11% do Salário Bruto, mas não é descontado
+# para o Sindicato, e que o FGTS corresponde a 11% do Salário Bruto, mas não é descontado
 # (é a empresa que deposita). O Salário Líquido corresponde ao Salário Bruto menos os descontos.
 # O programa deverá pedir ao usuário o valor da sua hora e a quantidade de horas trabalhadas no mês.
 #
@@ -22,18 +22,33 @@
 # Total de descontos: R$  165,00
 # Salário Liquido: R$  935,00
 
-valor_hora = float(input('Valor hora: '))
-qtde_horas = int(input('Quantidade de horas: '))
-salario = valor_hora * qtde_horas
-ir = salario * 5 / 100
-inss = salario * 10 / 100
-fgts = salario * 11 / 100
-descontos = ir + inss
-liquido = salario - descontos
+hourPay = float(input('Valor hora: '))
+qtyHours = int(input('Quantidade de horas: '))
 
-print(salario)
-print(ir)
-print(inss)
-print(fgts)
-print(descontos)
-print(liquido)
+salary = hourPay * qtyHours
+
+if salary <= 900:
+    ir = 0
+    print('IR de 0%')
+
+elif 900 < salary <= 1500:
+    ir = salary * 5 / 100
+    print('IR de 5%')
+
+elif 1500 < salary <= 2500:
+    ir = salary * 10 / 100
+    print('IR de 10%')
+
+else:
+    ir = salary * 20 / 100
+    print('IR de 20%')
+
+inss = salary * 10 / 100
+fgts = salary * 11 / 100
+discount = ir + inss
+
+netValue = salary + fgts - discount
+
+print(f'''Salário: R$ {salary:.2f}. IR: R$ {ir:.2f}. INSS: R$ {inss:.2f}.
+          FGTS: R$ {fgts:.2f}. Desconto: R$ {discount:.2f}.
+          Líquido: R$ {netValue:.2f}.''')
