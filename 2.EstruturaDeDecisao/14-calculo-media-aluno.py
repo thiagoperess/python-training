@@ -9,7 +9,7 @@
 # Entre 7.5 e 9.0          B
 # Entre 6.0 e 7.5          C
 # Entre 4.0 e 6.0          D
-# Entre 4.0 e zero
+# Entre 4.0 e zero         E
 
 # O algoritmo deve mostrar na tela as notas, a média, 
 # o conceito correspondente e a mensagem:
