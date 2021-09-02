@@ -24,14 +24,14 @@ if a == 0:
 
 else:
 	print("Calculando delta...")
-	delta = (((b**2) - (4*a*c)))
+	delta = ((b ** 2) - (4 * a * c))
 	
 	if delta == 0:
 		print("A equação possui apenas uma raiz que é: ")
-		raizUm = ((-b)+(delta**(1/2))/(2*a))
+		raizUm = ((-b) + (delta ** (1 / 2)) / (2 * a))
 		print(raizUm)
 	else:
-		raizUm = ((-b)+(delta**(1/2))/(2*a))
-		raizDois = ((-b)-(delta**(1/2))/(2*a))
+		raizUm = ((-b) + (delta ** (1 / 2)) / (2 * a))
+		raizDois = ((-b) - (delta ** (1 / 2)) / (2 * a))
 		print("A equação possui duas raizes que são:", raizUm, "e", raizDois)
 
