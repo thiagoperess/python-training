@@ -14,24 +14,30 @@
 print('-=' * 14)
 print('ANALISANDO TRIÂNGULOS'.center(30))
 print('-=' * 14)
-side1 = float(input('1º lado: '))
-side2 = float(input('2º lado: '))
-side3 = float(input('3º lado: '))
-if side1 < side2 + side3 and \
-        side2 < side3 + side1 and \
-        side3 < side2 + side1:
-    print('Estas retas \033[1;32mPODEM\033[m formar um triângulo!')
-    if side1 == side2 and \
-            side1 == side3 and \
-            side2 == side3:
-        print('Os lados formam um triâgulo EQUILÁTERO.')
-    elif side1 == side2 and side1 != side3 or \
-            side2 == side3 and side2 != side1 or \
-            side3 == side1 and side3 != side2:
-        print('Os lados formam um triângulo ISÓSCELES.')
-    elif side1 != side2 and side1 != side3 or \
-            side2 != side3 and side2 != side1 or \
-            side3 != side1 and side3 != side2:
-        print('Os lados formam um triângulo ESCALENO.')
+
+lado = []
+for i in range(3):
+    lados = float(input(f'{i+1}º lado: '))
+    lado.append(lados)
+
+if lado[0] < lado[1] + lado[2] and \
+   lado[1] < lado[2] + lado[0] and \
+   lado[2] < lado[1] + lado[0]:
+    print('Estas retas PODEM formar um triângulo!')
+
+    if lado[0] == lado[1] and \
+       lado[0] == lado[2] and \
+       lado[1] == lado[2]:
+        print('Formamos um triâgulo EQUILÁTERO.')
+
+    elif lado[1] == lado[0] != lado[2] or \
+         lado[2] == lado[1] != lado[0] or \
+         lado[0] == lado[2] != lado[1]:
+          print('Formamos um triângulo ISÓSCELES.')
+
+    elif lado[0] != lado[1] and \
+         lado[0] != lado[2] and \
+         lado[1] != lado[2]:
+          print('Formamos um triângulo ESCALENO.')
 else:
-    print('Estas retas \033[1;31mNÃO PODEM\033[m formar um triângulo')
+    print('Estas retas NÃO PODEM formar um triângulo')
