@@ -6,20 +6,18 @@
 # A mensagem "Reprovado", se a média for menor do que 7, com a respectiva média alcançada;
 # A mensagem "Aprovado com Distinção", se a média for igual a 10.
 
-cont = 0
-lst = []
+lista = []
 for i in range(3):
     notas = int(input(f'Nota {i+1}: '))
-    lst.append(notas)
-    cont += 1
+    lista.append(notas)
 
-media = sum(lst) / cont
+media = sum(lista) / len(lista)
 
 if media == 10:
-    print(f'Aprovado com média {media} e Distinção!')
+    print(f'Aprovado com Distinção!')
 
 elif 7 <= media < 10:
-    print(f'Aprovado com média {media}. Parabéns!')
+    print(f'Aprovado. Parabéns!')
 
 else:
-    print(f'Com média {media} você foi reprovado!')
+    print(f'Reprovado! Estude mais!')
