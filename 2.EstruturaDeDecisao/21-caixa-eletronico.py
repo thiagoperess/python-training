@@ -19,12 +19,11 @@ while True:
     else:
         if tot_cedula > 0:
             print(f'Total de {tot_cedula} cédula(s) de R$ {cedula}')
-        if cedula == 50:
-            cedula = 20
-        elif cedula == 20:
-            cedula = 10
-        elif cedula == 10:
-            cedula = 1
+
+        if cedula == 50: cedula = 20
+        elif cedula == 20: cedula = 10
+        elif cedula == 10: cedula = 1
         tot_cedula = 0
+        
         if total == 0:
             break
