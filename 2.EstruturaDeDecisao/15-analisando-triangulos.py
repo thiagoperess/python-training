@@ -25,9 +25,7 @@ if lado[0] < lado[1] + lado[2] and \
    lado[2] < lado[1] + lado[0]:
     print('Estas retas PODEM formar um triângulo!')
 
-    if lado[0] == lado[1] and \
-       lado[0] == lado[2] and \
-       lado[1] == lado[2]:
+    if lado[0] == lado[1] == lado[2]:
         print('Formamos um triâgulo EQUILÁTERO.')
 
     elif lado[1] == lado[0] != lado[2] or \
@@ -35,9 +33,7 @@ if lado[0] < lado[1] + lado[2] and \
          lado[0] == lado[2] != lado[1]:
           print('Formamos um triângulo ISÓSCELES.')
 
-    elif lado[0] != lado[1] and \
-         lado[0] != lado[2] and \
-         lado[1] != lado[2]:
-          print('Formamos um triângulo ESCALENO.')
+    elif lado[0] != lado[1] != lado[2]:
+            print('Formamos um triângulo ESCALENO.')
 else:
     print('Estas retas NÃO PODEM formar um triângulo')
