@@ -11,22 +11,15 @@
 
 # Solução
 
+strawb = int(input('Quantos kg de morango? '))
+apple = int(input('Quantos kg de maça? '))
 
-strawberrys = int(input('Quantos kg de morango você deseja? '))
-apples = int(input('Quantos kg de maça você deseja? '))
+strawb_kg = 2.50 if strawb <= 5 else 2.20
 
-strawberrys_kg = 0
-if strawberrys <= 5:
-    strawberrys_kg = 2.50
-else:
-    strawberrys_kg = 2.20
+apple_kg = 1.80 if apple <= 5 else 1.50
 
-apples_kg = 0
-if apples <= 5:
-    apples_kg = 1.80
-else:
-    apples_kg = 1.50
+total = apple * apple_kg + strawb * strawb_kg
 
-total = apples * apples_kg + strawberrys * strawberrys_kg
-
-print(f'{strawberrys}Kg de morango mais {apples}Kg de maça totaliza R$ {total:.2f}.')
+print(f'{strawb}Kg de morango: R${strawb * strawb_kg:.2f}\n'
+      f'{apple}Kg de maça: R${apple * apple_kg:.2f}\n'
+      f'Total: R${total:.2f}.')
