@@ -8,22 +8,27 @@
 # Exemplo 1: Para sacar a quantia de 256 reais, o programa fornece duas notas de 100, uma nota de 50, uma nota de 5 e uma nota de 1;
 # Exemplo 2: Para sacar a quantia de 399 reais, o programa fornece três notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1.
 
-saque = int(input('Qual valor você deseja sacar? R$ '))
+saque = int(input('Valor do Saque: R$ '))
 total = saque
-tot_cedula = 0
-cedula = 50
-while True:
-    if total >= cedula:
-        total -= cedula
-        tot_cedula += 1
-    else:
-        if tot_cedula > 0:
-            print(f'Total de {tot_cedula} cédula(s) de R$ {cedula}')
+total_notas = 0
+notas = 100
 
-        if cedula == 50: cedula = 20
-        elif cedula == 20: cedula = 10
-        elif cedula == 10: cedula = 1
-        tot_cedula = 0
+while True:
+    if total >= notas:
+        total -= notas
+        total_notas += 1
         
+    else:
+        if total_notas > 0:
+            print(f'{total_notas} nota(s) de R$ {notas}')
+
+        elif notas == 100: notas = 50
+        elif notas == 50: notas = 20
+        elif notas == 20: notas = 10
+        elif notas == 10: notas = 5
+        elif notas == 5: notas = 1
+
+        total_notas = 0
+
         if total == 0:
             break
