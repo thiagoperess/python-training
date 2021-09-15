@@ -16,16 +16,16 @@
 
 qty_plus = 0
 
-status = {  2 : 'Suspeito(a)',
-            3 : 'Cúmplice',
-            4 : 'Cúmplice',
-            5 : 'Assassino(a)'}
+status = {2: 'Suspeito(a)',
+          3: 'Cúmplice',
+          4: 'Cúmplice',
+          5: 'Assassino(a)'}
 
-ls_quest = [  'Telefonou para a vítima?',
-                    'Esteve no local do crime?',
-                    'Mora perto da vítima?',
-                    'Devia para a vítima?',
-                    'Já trabalhou com a vítima?']
+ls_quest = ['Telefonou para a vítima?',
+            'Esteve no local do crime?',
+            'Mora perto da vítima?',
+            'Devia para a vítima?',
+            'Já trabalhou com a vítima?']
 
 for i in range(len(ls_quest)):
     print(ls_quest[i] + ' [S/N]: ')
