@@ -5,9 +5,10 @@
 
 # Solução
 
-number = int(input('Digite uma nota: '))
+nota = int(input('Digite uma nota: '))
 
-while number > 10:
-    number = int(input('Nota inválida!\nFavor digitar um número de 0 à 10: '))
+while nota < 0 or nota > 10:
+    nota = int(input('Digite uma nota válida: '))
 
-print(f'Você digitou {number}. Esta é uma nota válida!\nFIM!')
+else:
+    print(f'{nota} é uma nota válida!')
