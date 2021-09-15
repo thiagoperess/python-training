@@ -4,25 +4,18 @@
 # e o segundo representando a sua altura em centímetros. Encontre o aluno mais alto e o mais baixo. 
 # Mostre o número do aluno mais alto e o número do aluno mais baixo, junto com suas alturas.
 
-codList = []
-heightList = []
-cNum = 1
-code = True
+cods = []
+heights = []
 
-while code <= 10:
-    print(f'Aluno nº {cNum}')
+for i in range(5):
+    print(f'Aluno nº {i+1}')
     code = int(input('Digite o código: '))
-    
-    if code == 0:
-        break
-    else:
-        height = float(input('Digite a altura: '))
-        codList.append(code)
-        heightList.append(height)
-        cNum += 1
+    height = float(input('Digite a altura: '))
+    cods.append(code)
+    heights.append(height)
 
-tall = heightList.index(max(heightList))
-short = heightList.index(min(heightList))
+tall = heights.index(max(heights))
+short = heights.index(min(heights))
 
-print(f'Código do mais alto: {codList[tall]}\n'
-      f'Código do mais baixo: {codList[short]}\n')
+print(f'Código do mais alto: {cods[tall]}\n'
+      f'Código do mais baixo: {cods[short]}\n')
