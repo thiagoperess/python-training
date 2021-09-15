@@ -4,8 +4,8 @@
 
 # Solução:
 
-num1 = int(input('Início do intervalo: '))
-num2 = int(input('Final do intervalo: '))
+var1 = int(input('Início: '))
+var2 = int(input('Fim: '))
 
-for i in range(num1+1,num2):
+for i in range(var1+1, var2):
     print(i)
