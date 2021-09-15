@@ -3,55 +3,51 @@
 # Um posto está vendendo combustíveis com a seguinte tabela de descontos:
 
 # Álcool:
-# Até 20 litros, desconto de 3% por litro
-# Acima de 20 litros, desconto de 5% por litro
+# Até 20 litros, desconto de 3%
+# Acima de 20 litros, desconto de 5%
 
 # Gasolina:
-# Até 20 litros, desconto de 4% por litro
-# Acima de 20 litros, desconto de 6% por litro.
-# 
+# Até 20 litros, desconto de 4%
+# Acima de 20 litros, desconto de 6%
+ 
 # Escreva um algoritmo que leia o número de litros vendidos, 
 # o tipo de combustível (codificado da seguinte forma: 
 # A-álcool, G-gasolina), calcule e imprima o valor a ser pago 
 # pelo cliente sabendo-se que o preço do litro da gasolina é R$ 2,50
 # e o preço do litro do álcool é R$ 1,90. 
 
-amount_liters = int(input('Quantos litros abastecer? '))
-fuel_type = str(input('Qual combustível? \
-                     \nDigite: G [Gasolina] | A [Álcool]: ')
-                     ).upper().strip()
+liters = int(input('Quantos litros? '))
+fuel = str(input('Combustível: G [Gasolina] | A [Álcool]: ')).upper().strip()
 total = 0
-gas_liter = 2.50
-alcohol_liter = 1.90
+gas = 2.50
+alcohol = 1.90
+disc = 0
 
-if fuel_type == 'G':
-    total = amount_liters * gas_liter
-elif fuel_type == 'A':
-    total = amount_liters * alcohol_liter
+if fuel == 'G':
+    total = liters * gas
+    fuel = 'Gasolina'
 
-discount = 0
-for i in range(amount_liters):
-    if amount_liters <= 20:
-        discount = total * 4 / 100
-    elif amount_liters > 20:
-        discount = total * 6 / 100
-fuel_type = 'Gasolina'
+elif fuel == 'A':
+    total = liters * alcohol
+    fuel = 'Álcool'
 
-discount = 0
-for i in range(amount_liters):
-    if amount_liters <= 20:
-        discount = total * 3 / 100
-    elif amount_liters > 20:
-        discount = total * 5 / 100
-fuel_type = 'Álcool'
+for i in range(liters):
 
-final_total = total - discount
+    if liters <= 20 and fuel == 'Gasolina':
+        disc = total * 0.04
+    elif liters > 20 and fuel == 'Gasolina':
+        disc = total * 0.06
 
-print(f'''
-Você abasteceu {amount_liters} litros de {fuel_type}.
-Isso deu um total de R$ {total:.2f}.
-Como foram abastecidos {amount_liters} litros, seu desconto é de R$ {discount}.
-No final, com desconto, totaliza R$ {final_total:.2f}
-''')
+    elif liters <= 20 and fuel == 'Álcool':
+        disc = total * 0.03
+    elif liters > 20 and fuel == 'Álcool':
+        disc = total * 0.05
+
+final = total - disc
+
+print(f'Abastecido: {liters}L de {fuel}\n'
+      f'Total: R$ {total:.2f}.\n'
+      f'Desconto: R$ {disc:.2f}.\n'
+      f'Total c/ Desconto: R$ {final:.2f}\n')
 
 
