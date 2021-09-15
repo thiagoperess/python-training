@@ -4,13 +4,15 @@
 
 # Solução
 
-num1 = int(input('Início do intervalo: '))
-num2 = int(input('Final do intervalo: '))
+vai = int(input('Início: '))
+vaf = int(input('Fim: '))
 
-list1 = []
+lista = []
+soma = 0
 
-for i in range(num1+1,num2):
-    print(i, end=', ')
-    list1.append(i)
+for i in range(vai+1, vaf):
+    print(i, end=' ')
+    lista.append(i)
+    soma += i
 
-print(f'\nA soma dos valores é {sum(list1)}')
+print(f'A soma é {soma}')
