@@ -8,7 +8,7 @@
 from time import sleep
 
 pop_A, pop_B, years = 80000, 200000, 0
-grow_A, grow_B = 0.3, 0.015
+grow_A, grow_B = 0.03, 0.015
 
 while pop_A < pop_B:
     pop_A += pop_A * grow_A
