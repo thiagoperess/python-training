@@ -8,16 +8,16 @@ import numpy as np
 
 classes = int(input('Quantidade de turmas: '))
 
-totalStudent = []
+total_student = []
 for i in range(classes):
     alunos = int(input(f'Alunos da {i+1}ª turma: '))
     
     while alunos > 40:
         alunos = int(input(f'Só 40 na {i+1}ª turma: '))    
     
-    totalStudent.append(alunos)
+    total_student.append(alunos)
 
-print(totalStudent)
+print(total_student)
 
-mean = np.mean(totalStudent)
+mean = np.mean(total_student)
 print(f'{mean:.2f}')
