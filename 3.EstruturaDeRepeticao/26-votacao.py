@@ -6,7 +6,7 @@
 qtyVoters = 0
 
 while (qtyVoters <= 0):
-    qtyVoters = int(input('Quantidade de votos: '))
+    qtyVoters = int(input('Quantidade de eleitores: '))
     
 Cand1, Cand2, Cand3 = 0, 0, 0
 
@@ -14,6 +14,7 @@ for i in range(0, qtyVoters):
     
     vote = 0
     while vote < 1 or vote > 3:
+        print(f'{i+1}º ELEITOR')
         vote = int(input('Candidato 1, 2 ou 3? '))
         if vote < 1 or vote > 3:
             print ('Candidato invalido!')
@@ -22,7 +23,8 @@ for i in range(0, qtyVoters):
     elif vote == 2: Cand2 += 1
     else: Cand3 += 1
 
-print (f'''Resultado:
+print (f'''
+Resultado:
 Candidato 1: {Cand1}
 Candidato 2: {Cand2}
 Candidato 3: {Cand3}
