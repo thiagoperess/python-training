@@ -9,31 +9,32 @@
 
 # Solução
 
-name = input('Qual seu nome [minimo 4 caracteres]: ')
+name = input('Nome: [minimo 4 letras]: ')
 age = int(input('Sua idade: '))
 salary = float(input('Salário: '))
-gender = input('Sexo ("f" para feminino ou "m" para masculino): ')
-status = input('Estado civil ("s", "c", "v" ou "d"): ')
+gender = input('Sexo [F/M]: ')
+status = input('Estado civil [S/C/V/D]: ')
 
 
 
 def valid_options(name, age, salary, gender, status):
 
+    while True:
+        if len(name) <= 3: 
+            name = input('No mínimo 3 letras: ')
 
-    while len(name) <= 3:
-        name = input('Nome deve ter mais que 3 letras: ')
+        elif 0 > age < 150: 
+            age = int(input('Idade entre 0 e 150: '))
 
-    while 0 < age > 150:
-        age = int(input('Voce deve ter entre 0 e 150 anos: '))
+        elif salary < 0: 
+            salary = float(input('Salário negativo: '))
 
-    while salary < 0:
-        salary = float(input('Salário negativo! Deve ser maior que 0: '))
+        elif gender not in 'mf': 
+            gender = input('Sexo Inválido: ')
 
-    while gender not in 'mf':
-        gender = input('Sexo: "f" para feminino ou "m" para masculino: ')
+        elif status not in 'scvd': 
+            status = input('Estado civil [S/C/V/D]: ')
 
-    while status not in 'scvd':
-        status = input('Estado civil. Marcar "s", "c", "v" ou "d": ')
-
+        break
 
 valid_options(name, age, salary, gender, status)
