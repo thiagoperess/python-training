@@ -6,9 +6,4 @@
 
 # Solução
 
-num1 = int(input('Qual a base?: '))
-ptcy = int(input('Qual a potência? '))
-
-sqrt = num1 ** ptcy
-
-print(f'O número {num1} elavado à {ptcy} é {sqrt}')
+print(int(input('Base: ')) ** int(input('Potência: ')))
