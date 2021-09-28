@@ -17,7 +17,7 @@ for i in range(10):
     else:
         odd_list.append(num)
 
-print('\nOs números pares são: \n' + f'{sorted(even_list)}\n' + \
-      '\nOs números ímpares são:\n' f'{sorted(odd_list)}')
+print(f'\nNúmeros pares: \n{sorted(even_list)}\n'
+      f'\nNúmeros ímpares:\n{sorted(odd_list)}')
 
 
