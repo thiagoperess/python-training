@@ -2,20 +2,22 @@
 
 # Faça um programa que calcule o mostre a média aritmética de N notas.
 
-qty_nts = int(input('Quantas notas vamos calcular? '))
+qty_notas = int(input('Quantas notas calcular? '))
 
 cont = 0
-lst = []
-for i in range(qty_nts):
+lista = []
+
+for i in range(qty_notas):
     notas = float(input(f'Nota {i+1}: '))
-    lst.append(notas)
+    lista.append(notas)
     cont += 1
 
-media = sum(lst) / cont
+media = sum(lista) / cont
 
-print(f'Notas obtidas: {lst}')
+print(f'Notas obtidas: {lista}\n'
+      f'Calculando média...\n'
+      f'{lista[0]} + {lista[1]} + {lista[2]} / {cont} = {media:.2f}')
 
-if 7 <= media <= 10:
-    print(f'Aprovado com média {media:.2f}!')
-else:
-    print(f'Reprovado com média {media:.2f}!')
+print(f'Aprovado! Média: {media:.2f}' 
+      if 7 <= media <= 10 
+      else f'Reprovado! Média: {media:.2f}')
