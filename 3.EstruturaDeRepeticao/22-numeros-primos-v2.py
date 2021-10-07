@@ -17,4 +17,4 @@ for i in range(1, num + 1):
         
 print(f'Divisores de {num}: {divide}')
     
-print(f'{num} é primo.' if count == 2 else f'{num} não é primo.')
+print(f'{num} é primo.' if len(divide) == 2 else f'{num} não é primo.')
