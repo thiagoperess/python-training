@@ -9,22 +9,23 @@
 qty_person = int(input('Quantas pessoas são? '))
 
 cont = 0
-lst = []
+lista = []
 for i in range(qty_person):
     age = int(input(f'Idade da {i+1}ª pessoa: '))
-    lst.append(age)
+    lista.append(age)
     cont += 1
 
-media = sum(lst) / cont
+media = sum(lista) / cont
 
-print(f'Notas obtidas: {lst}')
+print(f'Idades: {lista}')
 
 if 0 <= media <= 25:
-    print(f'A idade média é {media:.0f} anos.\
-            É uma turma jovem!')
+    print(f'A idade média é {media:.0f} anos.\n'
+          f'É uma turma jovem!')
+
 elif 26 <= media <= 60:
-    print(f'A idade média é {media:.0f} anos.\
-            É uma turma adulta!')
+    print(f'A idade média é {media:.0f} anos.\n'
+          f'É uma turma adulta!')
 else:
-    print(f'Idade média {media:.0f} anos.\
-            É uma turma idosa')
+    print(f'Idade média {media:.0f} anos.\n'
+          f'É uma turma idosa')
