@@ -7,10 +7,12 @@
 qty_cds = int(input('CDs comprados: '))
 
 cds = []
+
 for i in range(qty_cds):
-    price = float(input(f'Preço pago pelo {i+1}º CD: '))
+    price = float(input(f'Preço do {i+1}º CD: '))
     cds.append(price)
 
-mean = (sum(cds) / qty_cds)
+media = (sum(cds) / qty_cds)
 
-print(f'Total de CDs: {qty_cds}\nValor médio: R${mean:.2f}.')
+print(f'Total de CDs: {qty_cds}\n'
+      f'Valor médio: R${media:.2f}.')
