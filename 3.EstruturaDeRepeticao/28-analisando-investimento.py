@@ -15,4 +15,5 @@ for i in range(qty_cds):
 media = (sum(cds) / qty_cds)
 
 print(f'Total de CDs: {qty_cds}\n'
+      f'Valor da coleção: R${sum(cds):.2f}\n'
       f'Valor médio: R${media:.2f}.')
