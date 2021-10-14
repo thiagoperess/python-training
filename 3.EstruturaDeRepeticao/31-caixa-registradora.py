@@ -16,22 +16,26 @@
 # Dinheiro: R$ 20.00
 # Troco: R$ 11.00
 
+print('Bem vinde às Lojas Tabajara!\n')
+
 while True:
-    qty_items = int(input('Itens comprados: '))
+    qty_items = int(input('Quantidade de Itens: '))
 
     items = []
     for i in range(qty_items):
-        price = float(input(f'Produto {i+1}: '))
+        price = float(input(f'Preço do {i+1}º item: '))
         items.append(price)
         
     print(f'Total: R$ {sum(items):.2f}')
 
     pay = float(input('Quanto em dinheiro? '))
-    print(f'Troco: R$ {(pay-sum(items)):.2f}')
+    print(f'Troco: R$ {(pay - sum(items)):.2f}')
 
-    answer = str(input('Deseja continuar? [S/N] '))
+    answer = str(input('Deseja continuar? [S/N] ')).lower()
 
-    if answer in 'sS':
+    while answer in 's':
         pass
+
     else:
+        print('Obrigado e até a próxima!!')
         break
