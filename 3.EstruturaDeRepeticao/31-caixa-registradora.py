@@ -33,7 +33,7 @@ while True:
 
     answer = str(input('Deseja continuar? [S/N] ')).lower()
 
-    while answer in 's':
+    if answer in 's':
         pass
 
     else:

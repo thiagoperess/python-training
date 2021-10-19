@@ -5,18 +5,19 @@
 # e informe ao final a menor e a maior temperaturas informadas, 
 # bem como a média das temperaturas.
 
-qtyTemp = int(input('Quantos dias: '))
+qty_temp = int(input('Quantos dias: '))
 
-tempList = []
-for i in range(qtyTemp):
+temp_list = []
+for i in range(qty_temp):
     temperaturas = int(input(f'Tempo no {i+1}º dia: '))
         
-    tempList.append(temperaturas)
+    temp_list.append(temperaturas)
 
-print(tempList)
+print(temp_list)
 
-mean = (sum(tempList) / qtyTemp)
+media = (sum(temp_list) / qty_temp)
 
-print(f'Máxima de {max(tempList):.0f}°C;\
-        Mínima de {min(tempList):.0f}°C;\
-        Média de {mean:.0f}°C.')
+print(f'Máxima de {max(temp_list):.0f}°C'
+      f'Mínima de {min(temp_list):.0f}°C'
+      f'Média de {media:.0f}°C.')
+ 
