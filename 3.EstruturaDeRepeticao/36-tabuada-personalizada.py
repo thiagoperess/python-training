@@ -28,7 +28,7 @@ while initial > final:
     final = int(input('Terminar em: '))
 
 sleep(0.7)    
-print(f'Vou montar a tabuada de {base} começando em {initial} e terminando em {final}: ')
+print(f'Tabuada de {base} começando em {initial} e terminando em {final}: ')
 
 sleep(1)
 for c in range(initial, final+1):
