@@ -11,11 +11,16 @@ for i in range(5):
     print(f'Aluno nº {i+1}')
     code = int(input('Digite o código: '))
     height = float(input('Digite a altura: '))
+    
     cods.append(code)
     heights.append(height)
 
 tall = heights.index(max(heights))
 short = heights.index(min(heights))
 
-print(f'Código do mais alto: {cods[tall]}\n'
-      f'Código do mais baixo: {cods[short]}\n')
+print(
+      f'Código do mais alto: {cods[tall]}\n'
+      f'Altura do mais alto: {max(heights)}\n'
+      f'Código do mais baixo: {cods[short]}\n'
+      f'Altura do mais baixo: {min(heights)}'
+      )
