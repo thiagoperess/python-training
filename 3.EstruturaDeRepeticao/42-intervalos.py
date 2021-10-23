@@ -9,20 +9,21 @@
 
 n, c1, c2, c3, c4 = 1, 0, 0, 0, 0
 
-while n > 0:
+while n >= 0:
     n = int(input('Digite um número: '))
 
-if n >= 0 and n <= 25:
-    c1 += 1
-elif n >= 26 and n <= 50:
-    c2 += 1
-elif n >= 51 and n <= 75:
-    c3 += 1
-elif n >= 76 and n <= 100:
-    c4 += 1
+    if 0 >= n <= 25:
+        c1 += 1
+    elif 26 >= n <= 50:
+        c2 += 1
+    elif 51 >= n <= 75:
+        c3 += 1
+    elif 76 >= n <= 100:
+        c4 += 1
 
-print(f'Números entre 0-25: {c1},\n'
-      f'Entre votos 26-50: {c2},\n'
-      f'Entre votos 51-75: {c3},\n' 
-      f'Entre votos 76-100: {c4},\n'
+print(
+      f'Números entre 0-25: {c1},\n'
+      f'Números entre 26-50: {c2},\n'
+      f'Números entre 51-75: {c3},\n' 
+      f'Números entre 76-100: {c4},\n'
       )
