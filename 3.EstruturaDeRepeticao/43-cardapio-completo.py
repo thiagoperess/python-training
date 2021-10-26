@@ -57,4 +57,5 @@ else:
 print(
       f'Total R$ {total:.2f}\n'
       f'Obrigado e volte sempre!'
+      .replace('.',',')
       )
