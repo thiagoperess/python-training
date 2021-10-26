@@ -18,45 +18,46 @@
  
 # Para finalizar o conjunto de votos tem-se o valor zero.
 
-qtyVoters = 0
+while True:
+    qty_votes = int(input('Quantidade de votos: '))
 
-while (qtyVoters <= 0):
-    qtyVoters = int(input('Quantidade de eleitores: '))
+    if qty_votes == 0:
+        break
     
-c1, c2, c3, c4, nulo, branco = 0, 0, 0, 0, 0, 0
+    c1, c2, c3, c4, nulo, branco = 0, 0, 0, 0, 0, 0
 
-print('''
+    print('''
 
 CANDIDATOS
 
-Huguinho = 1
-Zezinho = 2
-Luizinho = 3
-Tio Patinhas = 4
-Nulo = 5
-Branco = 6 
+Huguinho (1)
+Zezinho: (2)
+Luizinho: (3)
+Tio Patinhas (4)
+Nulo (5)
+Branco (6) 
 
 ''')
 
-for i in range(0, qtyVoters):
-    vote = 0
-    while vote < 1 or vote > 6:
-        i += 1
-        vote = int(input(f'{i}º voto: '))
+    for i in range(0, qty_votes):
+        vote = 0
+        while vote < 1 or vote > 6:
+            i += 1
+            vote = int(input(f'{i}º voto: '))
+                
+            if vote == 1: c1 += 1
+            elif vote == 2: c2 += 1
+            elif vote == 3: c3 += 1
+            elif vote == 4: c4 += 1
+            elif vote == 5: nulo += 1
+            elif vote == 6: branco += 1
             
-        if vote == 1: c1 += 1
-        elif vote == 2: c2 += 1
-        elif vote == 3: c3 += 1
-        elif vote == 4: c4 += 1
-        elif vote == 5: nulo += 1
-        elif vote == 6: branco += 1
-        
-        else: 
-            print ('Candidato invalido!')
+            else: 
+                print ('Candidato invalido!')
 
-total = c1 + c2 + c3 + c4 + nulo + branco
+    total = c1 + c2 + c3 + c4 + nulo + branco
 
-print (f'''
+    print (f'''
 
 Resultado:
 
